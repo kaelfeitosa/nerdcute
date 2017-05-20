@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html id="html">
+  <style>
+    html {
+      background-color: #CDDC39;
+      text-align: center;
+    }
+
+    #emoji {
+      padding-top: 300px;
+      font-size: 15rem;
+    }
+  </style>
+  <div id="emoji">🤓</div>
+
+  <script>
+    var html = document.getElementById('html');
+
+    var emoji = document.getElementById('emoji');
+
+    var count = 0;
+    var emojis = ["🤓", "⚖", "😋", "😜", "😊", "😡", "😎", "👀", "🙄", "😘"];
+    var colors = [
+      "#F44336",
+      "#673AB7",
+      "#2196F3",
+      "#8BC34A",
+      "#FF9800",
+      "#8BC34A",
+      "#009688",
+      "#8BC34A"
+    ]
+
+    emoji.addEventListener("click", () => {
+      count = count + 1;
+      emoji.innerText = emojis[count % emojis.length];
+      html.style.backgroundColor = colors[count % colors.length];
+    });
+  </script>
+</html>

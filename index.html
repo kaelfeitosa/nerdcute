@@ -11,14 +11,14 @@
       font-size: 200px;
     }
   </style>
-  <div id="emoji">🤓</div>
+  <div id="emoji">clique</div>
 
   <script>
     var html = document.getElementById('html');
 
     var emoji = document.getElementById('emoji');
 
-    var count = 0;
+    var count = -1;
     var emojis = ["🤓", "⚖", "😋", "😜", "😊", "😡", "😎", "👀", "🙄", "😘"];
     var colors = [
       "#F44336",
@@ -31,7 +31,7 @@
       "#8BC34A"
     ]
 
-    emoji.addEventListener("click", () => {
+    html.addEventListener("click", () => {
       count = count + 1;
       emoji.innerText = emojis[count % emojis.length];
       html.style.backgroundColor = colors[count % colors.length];
